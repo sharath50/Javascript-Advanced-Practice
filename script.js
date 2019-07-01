@@ -1,17 +1,58 @@
-// variables in javascript....
+//// javascript syntax
 //
-//var name = "sharath";
-//var no = 23;
-//var grade = 23.0256;
-//var value = null;
-//var value2 = undefined;
-//var value3 = NaN;
-//var bool = true;
+///*
+//var 
+//let 
+//const
 //
-//let new1  = "hello";
-//const new2 = "you can't change my value...";
+//always ends with ';';
+//dinamically and weakly typed language...
 //
-// operators in javascript......
+//automatically converts strings into int vice versa according to the situation......
+//
+//
+//outputs are 
+//
+//innerHTML = "hello world";
+//innerText = "hello world";
+//textContent = "hello world";
+//
+//document.write("hello world");
+//window.alert("hello world");
+//console.log("hello world");
+//
+//
+//
+//
+//
+//*/
+//
+////variables in javascript....
+//
+//let name = "javascript";
+//        let int = 12562312;
+//        let float = 12540.25123;
+//        let bool = true;
+//        let value1 = null;
+//        let value2 = undefined;
+//        let value3 = NaN;
+//        
+//        // new in ES6 this is symbol to create unique values....
+//        let value4 = Symbol("hello");
+//        let value5 = Symbol("hello");
+//        
+//        // now value4 and value5 are completely two different unique values....
+//        
+//        //variable types...
+//        
+//        var variable1 = "just a string as many chars as we want....?";
+//        let variable2 = "we can use let to make it private variable inside local perimeter...";
+//        
+//        const variable3 = "const variables canno't change just like tuples in python -- immutables"
+//        
+//        
+//
+//// operators in javascript......
 //
 //var Math_operators = " + - * / % ** ";
 //
@@ -20,7 +61,8 @@
 //var Comparison_operators = " ==  !==  ===  !== <  >  <=  >=  ^  ";
 //
 //
-// Conditional statements in javascript.....
+//
+//// Conditional statements in javascript.....
 //
 //var another_name = "sharath"
 //
@@ -36,7 +78,7 @@
 //
 //var fname = "sharath";
 //
-//var name = fname == "sharath"? "mohan" : "no_name";
+//var name1 = fname == "sharath"? "mohan" : "no_name";
 //
 //// switch statements in javascript.......
 //
@@ -56,7 +98,10 @@
 //    console.log("nothing inside of it..");
 //}
 //
-// arrays in javascript........
+//
+//
+//// arrays in javascript........
+//
 //var list1 = Array(1,2,3,4,5,6,7,8,9,0);
 //var list2 = ["name" , "hello" , 12 , 1250.25 , undefined, NaN , null];
 //var list3 = ["hello" , [1,2,3, [9,8,7,4] ] , "hi" , "hella"];
@@ -84,9 +129,9 @@
 //
 //let obj5 = [1,2,3,4,5,6,7,8,9,0];
 //
-////console.log(Object.keys(obj4));
-////console.log(Object.values(obj4));
-////console.log(Object.entries(obj4));
+//console.log(Object.keys(obj4));
+//console.log(Object.values(obj4));
+//console.log(Object.entries(obj4));
 //
 //Object.keys(obj4).forEach( ( key ) => {
 //    console.log( key , obj4[key]);
@@ -99,9 +144,9 @@
 //Object.entries(obj4).forEach( ( key ) => {
 //    console.log( key , obj4[key]);
 //})
-
-
-// objects in javascript.......
+//
+//
+//// objects in javascript.......
 //
 //var object1 = {"name":"sharath" , "age" : "23"};
 //var object2 = {"names":["rebbaca" , "jenny" , "sherly"]}
@@ -109,7 +154,7 @@
 //console.log(object1.name , object1.age);
 //console.log(object2.names[1]);
 //
-// Loops in javascript.........
+//// Loops in javascript.........
 //
 //
 //for (var i=0;i<=10;i++) {
@@ -133,6 +178,12 @@
 //
 //console.log("*********************");
 //
+//for (let i=0; i<arr.length;i++) {
+//    console.log(arr[i]);
+//}
+//
+//console.log("*********************");
+//
 //var i=0;
 //while (i<=10) {
 //    console.log(i);
@@ -148,7 +199,7 @@
 //} while (i<=10);
 //
 //
-// function in javascript...
+//// function in javascript...
 //
 //
 //function say_Hello(name, age){
@@ -170,7 +221,7 @@
 //
 //func("sharath" ,"23");
 //
-// advanced objects assignment in javascript........
+//// advanced objects assignment in javascript........
 //
 //const obj1 = {
 //    "name1" : "sharath",
@@ -209,48 +260,48 @@
 //
 //console.log(double);
 //
-// map , filter , reduce functions in javascript......
-
-//const arr = [1,3,5,7,9,11,13,15];
+//// map , filter , reduce functions in javascript......
 //
-//let mapArray = arr.map((num) => {
+//const arr1 = [1,3,5,7,9,11,13,15];
+//
+//let mapArray = arr1.map((num) => {
 //   return num * 2;
 //});
 //
 //console.log(mapArray);
 //
-//let filterArray = arr.filter( (num) => {
+//let filterArray = arr1.filter( (num) => {
 //    return num%3 != 0;
 //});
 //
 //console.log(filterArray);
 //
-//let reduceArray = arr.reduce( (accumulator, num) => {
+//let reduceArray = arr1.reduce( (accumulator, num) => {
 //        return (accumulator - num);             
 //} , 10);
 //
 //console.log(reduceArray);
 //
 //
-// specials in ECMA-5 and 6 ....
-
-//let name = "sharath";
+//// specials in ECMA-5 and 6
+//
+//let name6 = "sharath";
 //let age = 23;
 //
-//const obj1 = {
-//    name , age
+//const obj6 = {
+//    name3 , age
 //}
 //
 //console.log(obj1);
 //
-//let value1 = Symbol();
-//let value2 = Symbol("foo");
-//let value3 = Symbol("foo");
+//let value01 = Symbol();
+//let value02 = Symbol("foo");
+//let value03 = Symbol("foo");
 //
-//console.log(value2 === value3);
+//console.log(value02 === value03);
 //
-// gives false because we use symbol to create unique values with same variable name .....
-
+//// gives false because we use symbol to create unique values with same variable name .....
+//
 //
 //let arrow_func = (a,b) => {
 //    let c = a + b
@@ -264,8 +315,8 @@
 //console.log(data(2,56));
 //
 //
-// advanced functions in javascript , closures , currying , compose....
-        
+//// advanced functions in javascript , closures , currying , compose
+//        
 //const closure1 = () => {
 //    let name = "sharath";
 //    const child = () => {
@@ -289,20 +340,20 @@
 //} 
 //
 //console.log(compose(currying)(10,10));
-
-
-//const name = () => {
+//
+//
+//const name001 = () => {
 //    console.log("hello");
 //}
-//let name1 = name;
+//let name07 = name001;
 //
-//console.log(name1());
-
-
-
-// classes and objects in javascript..........
-
-//const obj1 = {
+//console.log(name07());
+//
+//
+//
+//// classes and objects in javascript..........
+//
+//const obj01 = {
 //    no:[1,2,3,4,5,6,7,8,9],
 //    names:["sharath" , "karthik" , "rudresh"],
 //    func1 : () => {
@@ -310,17 +361,17 @@
 //    },
 //}
 //
-//console.log(obj1.no , obj1.names , obj1.func1());
-
-//const obj2 = {
+//console.log(obj01.no , obj01.names , obj01.func1());
+//
+//const obj02 = {
 //    func1 : function() {
 //        console.log(this);
 //    }
 //}
 //
-//obj2.func1();
-
-
+//obj02.func1();
+//
+//
 //class car {
 //    constructor(name, wheels , doors) {
 //        this.name = name;
@@ -379,28 +430,29 @@
 //car1.wipe_car_name();
 //
 //console.log(car1.car_info());
-
-
-//advanced for loops in javascript....
-
 //
-//let name = "sharath mohan";
 //
-//for (i of name){
+//// advanced for loops in javascript....
+//
+//
+//let name002= "sharath mohan";
+//
+//for (i of name002){
 //    console.log(i);
 //}
 //
 //
-//let names = ["henry" , "sharath" , "mohan" , "george" , "mark"];
+//let names1 = ["henry" , "sharath" , "mohan" , "george" , "mark"];
 //
 //
-// arrays , strings are iterables........
-//for (i of names){
+//// arrays , strings are iterables
+//
+//for (i of names1){
 //    console.log(i);
 //}
 //
 //
-//let obj6 = {
+//let obj06 = {
 //    "animal1" : "human",
 //    "animal2" : "snake",
 //    "animal3" : "jaguar",
@@ -408,34 +460,149 @@
 //    "animal5" : "lion"
 //}
 //
-// objects are emmurable.....
-//for (i in obj6) {
-//    console.log(i , ":", obj6[i]);
+//// objects are emmurable
+//
+//for (key in obj06) {
+//    console.log(key , ":", obj6[key]);
 //}
 
 
 
+// DOM selectors in JAvascript
 
+
+//let string = "hello world good evening all of you..."
 //
-//let first_id = document.getElementById('first_id');
-//let first_class = document.getElementById('first_class');
-//let first_tag = document.getElementById('first_tag');
+//obj1 = {
+//    fname:"sharath",
+//    lname:"mohan",
+//}
 //
-//first_id.innerHTML = "hello world";
-//first_id.innerText = "hi world";
-//first_id.textContent = "hi world";
+//console.log(string.indexOf('h'));
+//console.log(string.lastIndexOf('l'));
+//console.log(string.charAt(25));
+//
+//console.log(string.search("good"));
+//console.log(string.search("good"));
+//console.log(string.split(" "));
+//console.log(string.toLowerCase());
+//console.log(string.toUpperCase());
+//console.log(string.endsWith('.'));
+//console.log(string.includes('z'));
+//console.log(string.startsWith('e'));
+//console.log(string.concat("hi"));
+//
+//
+//console.log("$".repeat(50));
 //
 //
 //
-//document.querySelector(".active");
-//document.querySelector("#main");
-//document.querySelector("small");
+//let list = Array("hello", "world", "good", "evening", "all", "of", "you...");
+//
+//// array functions
+//
+//console.log(list.length);
+//console.log(list.slice(1,2));
+//console.log(list.splice(1,4,"hello"));
+//console.log(list.concat("hi"));
+//console.log(list.join(""));
+//console.log(list.toString(""));
+//console.log(list.sort());
+//console.log(list.reverse());
+//console.log(list.pop());
+//console.log(list.push("gango"));
+//console.log(list.shift());
+//console.log(list.unshift("hohooo"));
+//
+//console.log(list.unshift("hohooo"));
+//console.log(list.includes("all"));
+////console.log(list.fill("all"));
+//console.log(list.splice(1,0,"home"));
+//console.log(list);
+//
+//var txt = "";
+//var numbers = [45, 4, 9, 16, 25];
+//numbers.forEach(myFunction);
+//
+//function myFunction(value, index, array) {
+//  txt += value + "<br>"; 
+//}
+//
+//console.log(txt);
+//
+//// ---------------------------------
+//
+//
+//let map_list = list.map( (i)=> {
+//    return i.split("");
+//});
+//
+//console.log(map_list);
+//
+//map_list.forEach( (i) => {
+//    i.forEach( (j)=> {
+//        console.log(j);     
+//    });
+//});
+//
+//
+//let filter_array = list.filter( (k) => {
+//    return k.length >= 4;
+//})
+//
+//console.log(filter_array);
+//
+//
+//let reduce_array = list.reduce( (acc , i) => {
+//        return acc += i;
+//} , "starting.... : ");
+//
+//console.log(reduce_array);
+//
+////----------------------------------------
+//
+//
+//let no = 1235.51656;
+//let no1 = 12023;
+//
+//// numbers functions....
+//
+//console.log(no.toString());
+//console.log(no.toExponential());
+//console.log(no.toPrecision(6));
+//console.log(no.toFixed(2));
+//
+//console.log(Math.round(no));
+//console.log(Math.floor(no));
+//console.log(Math.ceil(no));
+//console.log(Math.abs(no));
+//console.log(Math.trunc(no));
+//console.log(Math.cbrt(no));
+//console.log(Math.sqrt(no));
+//console.log(Math.pow(no,no));
+//console.log(Math.max(1,2,3,4,5));
+//console.log(Math.min(1,2,3,4,5));
+//console.log(Number("456"));
+//console.log(parseInt(455.020));
+//console.log(no1.toPrecision(7));
+//
 
 
+// working with date objects...
 
 
-
-
+//var d = new Date(1973 , 11 , 09 , 08 , 35 , 43 , 0);
+//var d1 = new Date();
+//
+//console.log(d1.getFullYear());
+//console.log(d1.getMonth());
+//console.log(d1.getDate());
+//list = ["sunday" , "monday" , "tuesday" , "wednessday" , "thursday" , "friday" , "saturday"]
+//console.log(list[d1.getDay()]);
+//console.log(d1.getHours());
+//console.log(d1.getMinutes());
+//console.log(d1.getSeconds());
+//console.log(d1.getMilliseconds());
 
 
 
