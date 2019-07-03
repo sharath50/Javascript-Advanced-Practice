@@ -432,6 +432,207 @@
 //console.log(car1.car_info());
 //
 //
+// 
+//class names {
+//    constructor(name , age , work) {
+//        this.name = name;
+//        this.age = age;
+//        this.work = work;
+//    }
+//    
+//    hello() {
+//        console.log('hello...');
+//    }
+//}
+//
+//class persons extends names {
+//    constructor(name , age , work) {
+//        super(name , age , work);
+//    }
+//    
+//    hi() {
+//        console.log('hi...');
+//    }
+//    
+//    info() {
+//        if (this.work){
+//            console.log(`name is ${this.name} age is ${this.age} work is ${this.work}`);
+//        } else if (this.grade){
+//            console.log(`name is ${this.name} age is ${this.age} work is ${this.grade}`);
+//        }
+//        
+//    }
+//}
+//
+//class solders extends persons {
+//    constructor(name , age , grade) {
+//        super(name , age);
+//        this.grade = grade;
+//    }
+//    
+//    info() {
+//        console.log(`name is ${this.name} age is ${this.age} and grade is ${this.grade}`);
+//    }
+//}
+//
+//const person1 = new persons('mohan' , 21 , 'web designer')
+//const solder1 = new solders('sharath' , 23 , '4th');
+//
+//solder1.hello();
+//solder1.hi();
+//
+//solder1.info();
+//person1.info();
+
+
+////prototyping of OOP in javascript...........
+//
+//
+//const account = function(fname , lname , age , gender , work , salary , initial_deposite , branch) {
+//    this.fname = fname;
+//    this.lname = lname;
+//    this.fullname = fname + lname;
+//    this.age = age;
+//    this.gender = gender;
+//    this.work = work;
+//    this.salary = salary;
+//    this.iDeposite = initial_deposite;
+//    this.balance = this.iDeposite;
+//    this.branch = branch;
+//    
+//    let membership;
+//    if (this.iDeposite >= 10000) {
+//        membership = 'Gold';
+//    } else if (this.iDeposite >= 6000) {
+//        membership = 'Platinum';
+//    } else {
+//        membership = 'regular'; 
+//    }
+//    if (membership == 'Gold' || membership == 'Platinum') {
+//        console.log(`hi ${this.fullname}, thank you for opening account in our bank sector at ${this.branch} branch you got ${membership} membership. enjoy...! `);
+//    } else {
+//        console.log(`hi ${this.fullname}, thank you for opening account in our bank you got bank account in our bank. enjoy...! `);
+//    }
+//}
+//
+//
+//account.prototype.info = function() {
+//    const prefix = this.gender == 'male'? 'he': 'she';
+//    return `name is ${this.fname} age is ${this.age}, and ${prefix} is working as a ${this.work}, salary would be ${this.salary} and ${prefix} deposited intially ${this.iDeposite.toFixed(2)}`;
+//}
+//
+//account.prototype.deposite = function(amount) {
+//    this.balance += amount;
+//    return `amount Rs.${amount} has been deposite right now... balance : ${this.balance.toFixed(2)}`;
+//}
+//
+//account.prototype.withdraw = function(amount) {
+//    if (this.balance >= amount) {
+//        this.balance -= amount;
+//        return `amount Rs.${amount} has been withdrawn right now...  balance : ${this.balance.toFixed(2)}`;
+//    } else {
+//        return `hi, you are trying to widraw Rs.${amount} which is more than the balance what you have in your account right now... balance : ${this.balance.toFixed(2)}`;
+//    }
+//    
+//}
+//
+//
+//const online_account = function(fname , lname , age , gender , work , salary , initial_deposite , online) {
+//    account.call(this, fname , lname , age , gender , work , salary , initial_deposite);
+//    this.online = online;
+//    
+//    let membership;
+//    if (this.iDeposite >= 10000) {
+//        membership = 'Gold';
+//    } else if (this.iDeposite >= 6000) {
+//        membership = 'Platinum';
+//    } else {
+//        membership = 'regular'; 
+//    }
+//    if (membership == 'Gold' || membership == 'Platinum') {
+//        if (this.online){
+//            console.log(`hi ${this.fullname}, thank you for opening online account in our bank sector you got ${membership} membership. enjoy...! `);
+//        } else {
+//            console.log();
+//        }
+//    } else {
+//        console.log(`hi ${this.fullname}, thank you for opening account in our bank you got bank account in our bank. enjoy...! `);
+//    }
+//}
+//
+//
+//online_account.prototype = Object.create(account.prototype);
+//
+//online_account.prototype.constructor = online_account;
+//
+//
+//const client1 = new account('sharath' , 'mohan' , 23 , "male" ,'web developer' , 15000 , 7000 , 'vidyaranyapura');
+//
+//const client2 = new online_account('rudresh' , 'karthik' , 19 , 'male' , 'accountant' , 13000 , 10000 , true);
+//
+//console.log(client1.info());
+//console.log(client1.deposite(700));
+//console.log(client1.withdraw(1000));
+//
+//console.log(client2.info());
+//console.log(client2.deposite(1800));
+//console.log(client2.withdraw(15000));
+//
+//console.log(client1.fname);
+//console.log(client1.lname);
+//console.log(client1.fullname);
+//console.log(client1.age);
+//console.log(client1.work);
+//console.log(client1.salary);
+//console.log(client1.iDeposit);
+//console.log(client1.balance);
+//
+//console.log(client1.info());
+//console.log(client1.deposite(200));
+//console.log(client1.withdraw(2200));
+//
+//
+//console.log(client2.info());
+//console.log(client2.deposite(700));
+//console.log(client2.withdraw(200));
+//
+
+
+// creating objects in javascript....
+
+//const employees = {
+//    getInfo : function() {
+//        return `first name : ${this.fname}, and last name : ${this.lname} \n name : ${this.fname + this.lname} and employee id : ${this.empIdNo}, date of join : ${this.dateOfJOin}, designation : ${this.designation}, salary : ${this.salary}`
+//    },
+//}
+//
+//
+//const employee1 = Object.create(employees);
+//
+//employee1.fname = "Poprica";
+//employee1.lname = "Roney";
+//employee1.fullname = employee1.fname + employee1.lname;
+//employee1.empIdNo = 457121;
+//employee1.dateOfJoin = '10-02-2017';
+//employee1.designation = 'web developer';
+//employee1.salary = 15000;
+//
+//
+//console.log(employee1.fname)
+//console.log(employee1.lname)
+//console.log(employee1.fullname)
+//console.log(employee1.empIdNo)
+//console.log(employee1.dateOfJoin)
+//console.log(employee1.designation)
+//console.log(employee1.salary)
+//
+//employee1.fname = "brenda";
+//
+//console.log(employee1.fullname)
+//console.log(employee1.fname)
+
+
+
 //// advanced for loops in javascript....
 //
 //
@@ -605,9 +806,16 @@
 //console.log(d1.getMilliseconds());
 
 
-
-
-
+//
+//localStorage.setItem();
+//sessionStorage.setItem();
+//
+//localStorage.getItem();
+//sessionStorage.getItem();
+//
+//sessionStorage.clear();
+//localStorage.clear();
+//
 
 
 
