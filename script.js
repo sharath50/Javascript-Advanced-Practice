@@ -56,9 +56,9 @@
 //
 //var Math_operators = " + - * / % ** ";
 //
-//var Logical_operators = " |  &  ||  &&  ! ";
+//var Logical_operators = " |  &  ||  &&  ! ^ ";
 //
-//var Comparison_operators = " ==  !==  ===  !== <  >  <=  >=  ^  ";
+//var Comparison_operators = " ==  !==  ===  !== <  >  <=  >= ";
 //
 //
 //
@@ -134,7 +134,7 @@
 //console.log(Object.entries(obj4));
 //
 //Object.keys(obj4).forEach( ( key ) => {
-//    console.log( key , obj4[key]);
+//    console.log( key , '===' , obj4[key]);
 //})
 //
 //Object.values(obj4).forEach( ( value ) => {
@@ -142,7 +142,7 @@
 //})
 //
 //Object.entries(obj4).forEach( ( key ) => {
-//    console.log( key , obj4[key]);
+//    console.log( key[0] , '===' , key[1]);
 //})
 //
 //
@@ -483,8 +483,8 @@
 //
 //solder1.info();
 //person1.info();
-
-
+//
+//
 ////prototyping of OOP in javascript...........
 //
 //
@@ -596,10 +596,10 @@
 //console.log(client2.deposite(700));
 //console.log(client2.withdraw(200));
 //
-
-
-// creating objects in javascript....
-
+//
+//
+//// creating objects in javascript....
+//
 //const employees = {
 //    getInfo : function() {
 //        return `first name : ${this.fname}, and last name : ${this.lname} \n name : ${this.fname + this.lname} and employee id : ${this.empIdNo}, date of join : ${this.dateOfJOin}, designation : ${this.designation}, salary : ${this.salary}`
@@ -630,9 +630,9 @@
 //
 //console.log(employee1.fullname)
 //console.log(employee1.fname)
-
-
-
+//
+//
+//
 //// advanced for loops in javascript....
 //
 //
@@ -666,12 +666,12 @@
 //for (key in obj06) {
 //    console.log(key , ":", obj6[key]);
 //}
-
-
-
-// DOM selectors in JAvascript
-
-
+//
+//
+//
+//// DOM selectors in JAvascript
+//
+//
 //let string = "hello world good evening all of you..."
 //
 //obj1 = {
@@ -787,11 +787,11 @@
 //console.log(parseInt(455.020));
 //console.log(no1.toPrecision(7));
 //
-
-
-// working with date objects...
-
-
+//
+//
+//// working with date objects...
+//
+//
 //var d = new Date(1973 , 11 , 09 , 08 , 35 , 43 , 0);
 //var d1 = new Date();
 //
@@ -804,8 +804,8 @@
 //console.log(d1.getMinutes());
 //console.log(d1.getSeconds());
 //console.log(d1.getMilliseconds());
-
-
+//
+//
 //
 //localStorage.setItem();
 //sessionStorage.setItem();
@@ -816,7 +816,7 @@
 //sessionStorage.clear();
 //localStorage.clear();
 //
-
+//
 //document.getElementById('button').addEventListener('click' , loadData);
 //
 //
@@ -854,7 +854,7 @@
 //    
 //    xhr.send();
 //}
-
+//
 //document.getElementById('button1').addEventListener('click' , loademployeeData);
 //
 //document.getElementById('button2').addEventListener('click' , loademployeesData);
@@ -913,7 +913,7 @@
 //    xhr.send();
 //}
 //
-
+//
 //// receiving data from the online json placeholder website...
 //function loadonlineData() {
 //    //create new server request
@@ -938,19 +938,120 @@
 //    
 //    xhr.send();
 //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//
+//document.getElementById('button4').addEventListener('click' , loadData);
+//
+//document.getElementById('button5').addEventListener('click' , loadJsonData);
+//
+//document.getElementById('button6').addEventListener('click' , loadimageData);
+//
+//
+//function loadData() {
+//    fetch('js/sample.txt')
+//    .then( (response) => {
+//        return response.text();
+//    })
+//    .then( (data) => {
+//        document.getElementById('output4').innerHTML = data;
+//    })
+//    .catch( (error) => {
+//        console.log(error);
+//    })
+//}
+//
+//
+//
+//function loadJsonData() {
+//    fetch('js/employees.json')
+//    .then( (response) => {
+//        return response.json();
+//    })
+//    .then( (data) => {
+//        let output = "";
+//        data.forEach( (employee) => {
+//            output += '<ul>';
+//            for (item in employee ){
+//                output += `<li>${item} == ${employee[item]}</li>`;
+//            }
+//            output += "</ul><hr/>";
+//        })
+//        document.getElementById('output5').innerHTML = output;
+//    })
+//    .catch( (error) => {
+//        console.log(error)
+//    })
+//}
+//
+//
+//function loadimageData() {
+//    fetch('https://picsum.photos/list')
+//    .then( (response) => { 
+//        return response.json();
+//    })
+//    .then( (data) => { 
+//        let output = "<ul>";
+//        data.forEach( (data_content) => {
+//            output += `<li> <a target=\'_blank\' href=\'${data_content.post_url}\'>${data_content.author}</a> 
+//                <h6>${data_content.author}</h6></li>`;
+//            output += "</ul><hr/>";
+//        })
+//        document.getElementById('output6').innerHTML = output;
+//    })
+//    .catch( (error) => { 
+//        console.log(error)
+//    })
+//}
+//
+//// timing function in javascript...
+//
+//    let i = 0;
+//    
+//    function texting() {
+//        i++;
+//        console.log(i);
+//        if (i < 10) {
+//            setTimeout(texting , 500);
+//        }
+//    }
+//    
+//    texting();
+//    
+//    
+//    let i = 0;
+//    
+//    function texting() {
+//        i++;
+//        console.log(i);
+//        let iter = setTimeout(texting , 500);
+//        if (i == 10) {
+//            clearTimeout(iter);
+//        }
+//    }
+//    
+//    texting();
+//    
+//    let i = 0;
+//    
+//    function texting(x) {
+//        i++;
+//        console.log(x);
+//        if (i == 10) {
+//            clearInterval(iter);
+//        }
+//    }
+//    
+//    let iter = setInterval(texting , 500 , 'hello')
+//
+//
+//// BOM operations in java script....
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
