@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ECMAscript Practice</title>
+  </head>
+  <body>
+    <form name="login" action="">
+      <input type="text" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      // properties
+      console.log(window); // window is the main object in DOM
+      console.log(window.document); // contains all the docuemtns starts from html tag
+      window.location; // broser location
+      window.console;
+      window.innerHeight; // to get size of browser view
+      window.innerWidth;
+      window.pageXOffset; // to get scroll bar possition
+      window.pageYOffset;
+
+      // methods
+      window.alert();
+      window.prompt();
+      window.confirm();
+      window.back(); // to go back in browser history
+
+      // forms
+      let login = document.login;
+      login.addEventListener("submit", e => {
+        e.preventDefault();
+      });
+      let name = login.elements["name"].value;
+    </script>
+  </body>
+</html>
